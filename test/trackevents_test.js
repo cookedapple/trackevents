@@ -1,4 +1,4 @@
-var trackevents = require('../lib/trackevents.js');
+var te = require('../lib/trackevents.js');
 
 /*
   ======== A Handy Little Nodeunit Reference ========
@@ -20,3 +20,11 @@ var trackevents = require('../lib/trackevents.js');
     test.ifError(value)
 */
 
+exports['te'] = {
+  'learning test': function(test) {
+    test.expect(2);
+    test.equal(te.ca()['d'], 'salvation');
+    test.ok(te.ca()['b']);
+    test.done();
+  }
+};
